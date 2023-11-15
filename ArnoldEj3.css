@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+
+img{
+    float: right;
+}
+#left{
+    float: left;
+    width: 45%;
+}
+#right{
+    float: right;
+    width: 45%;
+}
