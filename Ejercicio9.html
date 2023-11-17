@@ -15,7 +15,9 @@
         }
 
         body
-        {  
+        {   
+            display: flex;
+            flex-direction: column;
             background-color: beige;
         }
 
@@ -23,7 +25,7 @@
         {
             display: flex;
             justify-content: center;
-            margin-top: 6rem;
+            margin-top: 4rem;
             gap: 2rem;
         }
 
@@ -39,6 +41,14 @@
             scale: 1.1;
             transform: 0.3s;
         }
+
+        .seleccion
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
     </style>
 
 </head>
@@ -46,7 +56,18 @@
     
     <h1>Elija el color de fondo!</h1>
 
-    <main>
+    <div class="seleccion">
+        <div class="back">
+            <label for="radioBack">Modificar documento entero</label>
+            <input  type="radio" name="opcion" id="radioBack">
+        </div>
+        <div class="main">
+            <label for="radioMain">Modificar seccion botones</label>
+            <input type="radio" name="opcion" id="radioMain">
+        </div>
+    </div>
+
+    <main id="Main">
         <button onclick="cambiarColor('green')" style="background-color: green;" id="Verde">Verde</button>
         <button onclick="cambiarColor('red')" style="background-color: red;" id="Rojo">Rojo</button>
         <button onclick="cambiarColor('white')" style="background-color: white;" id="Blanco">Blanco</button>
@@ -54,9 +75,21 @@
     </main>
 
 <script>
-        function cambiarColor(color) {
+    var radioBack = document.getElementById('radioBack');
+    var radioMain = document.getElementById('radioMain');
+
+    function cambiarColor(color) 
+    {
+        if(radioBack.checked)
+        {
             document.body.style.backgroundColor = color;
         }
+        else if(radioMain.checked)
+        {
+            document.getElementById('Main').style.backgroundColor = color;
+        }
+    }
+
 </script>
 </body>
 
