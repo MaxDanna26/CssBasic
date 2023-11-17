@@ -11,7 +11,7 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: bold;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
         body
@@ -27,7 +27,7 @@
         {
             display: flex;
             justify-content: center;
-            margin-top: 4rem;
+            margin-top: 2rem;
             gap: 2rem;
         }
 
@@ -42,10 +42,22 @@
         button:hover
         {
             scale: 1.1;
-            transform: 0.3s;
+            transition: 0.3s;
         }
 
         .seleccion
+        {
+            display: flex;
+            flex-direction: row;
+            gap: 10rem;
+            align-items: center;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 1rem;
+        }
+        .select
         {
             display: flex;
             flex-direction: column;
@@ -78,10 +90,26 @@
     </main>
 
     <div class="segundoEj">
+        <p>Realiza un programa que: (1ª versión con alert/prompt, 2ª versión con campo text/write)</p>
         <button onclick="alert('¿Como te llamas?')">Ejercio 9: Nombre/alert</button>
         <button onclick="alert('¿Que edad tienes?')">Ejercio 9: Edad/alert</button>
 
         <button onclick="guardarInfo()">Ejercio 9: Nombre/Edad</button>
+    </div>
+
+    <div class="tercerEj">
+        <p>Realizar un menú, con una lista de formulario del tipo select</p>
+
+        <div class="select">
+            <select id="comida" name="imagen">
+                <option value="1">Burritos</option>
+                <option value="2">Cervezas</option>
+                <option value="3">Tacos</option>
+                <option value="4">Quesadillas</option>
+            </select>
+            <img id="imagenComida" src="/IMG/1.jpeg" alt="Imagen de Burrito">
+        </div>
+
     </div>
 
 <script>
@@ -112,6 +140,18 @@
         else
         alert('Hola usuario me alegro de que vivieras '+ resultado + ' dias!')
     }
+    
+    let imagenComida = document.getElementById('imagenComida');
+
+    document.getElementById('comida').addEventListener('change', cambiarImagen)
+
+    function cambiarImagen()
+    {
+        let imagenes = document.getElementById('comida').value;
+        imagenComida.setAttribute('src','/IMG/'+imagenes+'.jpeg')
+    }
+
+
 </script>
 </body>
 
