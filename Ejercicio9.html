@@ -18,6 +18,8 @@
         {   
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: beige;
         }
 
@@ -34,6 +36,7 @@
             padding: 1rem;
             border-radius: 0.7rem;
             border: 1px black solid;
+            margin: 1rem;
         }
 
         button:hover
@@ -74,6 +77,13 @@
         <button onclick="cambiarColor('blue')" style="background-color: blue;" id="Azul">Azul</button>
     </main>
 
+    <div class="segundoEj">
+        <button onclick="alert('¿Como te llamas?')">Ejercio 9: Nombre/alert</button>
+        <button onclick="alert('¿Que edad tienes?')">Ejercio 9: Edad/alert</button>
+
+        <button onclick="guardarInfo()">Ejercio 9: Nombre/Edad</button>
+    </div>
+
 <script>
     var radioBack = document.getElementById('radioBack');
     var radioMain = document.getElementById('radioMain');
@@ -89,7 +99,19 @@
             document.getElementById('Main').style.backgroundColor = color;
         }
     }
+    
+    function guardarInfo()
+    {
+        let nombre = prompt('¿Como te llamas?');
+        let edad = prompt('¿Que edad tienes?');
+        
+        resultado = edad * 365;
 
+        if(nombre != null || '')
+        alert('Hola ' + nombre + ' me alegro de que vivieras '+ resultado + ' dias!');
+        else
+        alert('Hola usuario me alegro de que vivieras '+ resultado + ' dias!')
+    }
 </script>
 </body>
 
