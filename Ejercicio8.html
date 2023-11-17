@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de DNI</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: beige;
+            
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 8rem;
+        }
+
+        button{
+            padding: 0.5rem;
+            background-color: rgb(103, 103, 224);
+            border-radius: 0.6rem;
+
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Validación de DNI</h1>
+
+        <label for="dniInput">Introduce tu DNI:</label>
+    
+        <input type="text" id="dniInput" maxlength="9">
+    
+        <button onclick="validarDNI()">Validar DNI</button>
+    </main>
+
+
+<script src="/Ejercicio8.js"></script>
+</body>
+</html>

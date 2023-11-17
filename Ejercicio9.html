@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones de colores!</title>
+
+    <style>
+        h1
+        {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        body
+        {  
+            background-color: beige;
+        }
+
+        main
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 6rem;
+            gap: 2rem;
+        }
+
+        button
+        {   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 1rem;
+            border-radius: 0.7rem;
+            border: 1px black solid;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Elija el color de fondo!</h1>
+
+    <main>
+        <button onclick="cambiarColor('green')" style="background-color: green;" id="Verde">Verde</button>
+        <button onclick="cambiarColor('red')" style="background-color: red;" id="Rojo">Rojo</button>
+        <button onclick="cambiarColor('white')" style="background-color: white;" id="Blanco">Blanco</button>
+        <button onclick="cambiarColor('blue')" style="background-color: blue;" id="Azul">Azul</button>
+    </main>
+
+<script>
+        function cambiarColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+</script>
+</body>
+
+</html>

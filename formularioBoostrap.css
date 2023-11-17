@@ -1,5 +1,5 @@
 .container{
-    width: 60%;
+    width: 50%;
     background-color: #fff;
     border-radius: 1rem;
     padding: 1rem;
@@ -11,4 +11,22 @@ body{
 
 label{
     font-weight: bold;
+}
+
+.duration{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-ver{
+    position: absolute;
+    right: 25%;
+    background-color: blue;
+    width: 50%;
+    height: 600px;
+    z-index: 1;
+}
+
+.hidden{
+    display: none;
 }
