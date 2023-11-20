@@ -1,0 +1,63 @@
+body
+{
+    display: flex;
+    flex-direction: row;
+    background-color: beige;
+    margin-top: 6rem;
+}
+
+button
+{
+    background-color: red;
+    padding: 1rem;
+}
+    
+img
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 1.4rem;
+
+}
+
+.seccionJuego
+{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.letrasErroneas{
+    background-color: black;
+}
+
+.ladoIzquierdo,.ladoDerecho
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+h2,p
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#letrasWrong
+{
+    border: 1px solid black;
+}
+
+.ladoDerecho
+{
+    justify-content: space-between;
+}
+
+.seccionInsert
+{
+    display: flex;
+    flex-direction: column;
+}

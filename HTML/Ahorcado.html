@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/ahorcado.css">
+    <title>Ahorcado</title>
+
+</head>
+<body>
+
+    <div class="ladoIzquierdo">
+
+        <img src="/IMG/Captura de pantalla 2023-11-20 165936.png" alt="">
+        <p id="espacioToFill"></p>
+
+        <input type="text" id="letrasErroneas" placeholder="Inserta tu letra aqui!">
+        <button id="ronda">Probar!</button>
+
+    </div>
+
+    <div class="ladoDerecho">
+        <h2>Letras erróneas:</h2>
+        <p id="letrasWrong"></p>
+
+        <div class="seccionInsert">
+            <h3>Este juego contiene palabras pero si quieres puedes agregar!</h3>
+            <input type="text" name="insertWord" id="insertWord" placeholder="Inserta una palabra si lo deseas!">
+            <button id="btnInsertar">Insertar palabra!</button>
+        </div>
+    </div>
+
+    <script src="/JS/Ahorcado.js"></script>
+</body>
+
+</html>
