@@ -30,6 +30,11 @@ btnRonda.addEventListener('click', Comprobacion);
 function Comprobacion() {
     let inputLetras = document.getElementById('letrasErroneas');
     let letraRonda = inputLetras.value;
+    if(letraRonda == null || letraRonda == ' ' || letraRonda == '')
+    {
+        alert("No ha ingresado ninguna letra!");
+        return;
+    }
     console.log(letraRonda);
 
     let letraEncontrada = false;
@@ -49,19 +54,26 @@ function Comprobacion() {
     }
 
     actualizarInterfaz();
+    inputLetras.value = '';
 }
 
 let insertPalabra = document.getElementById("insertWord");
 let btnInsertar = document.getElementById("btnInsertar");
-
-
 
 btnInsertar.addEventListener('click', InsertarWord);
 
 function InsertarWord()
 {
     let newPalabra = insertPalabra.value.toString();
-    palabras.push(newPalabra);
+    if(newPalabra == null || newPalabra == '' || newPalabra == ' ')
+    {
+        alert("No ha ingresado ninguna palabra!");
+    }
+    else
+    {
+        palabras.push(newPalabra);
+    }
+
 }
 
 console.log(palabras);
